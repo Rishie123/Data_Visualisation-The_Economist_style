@@ -1,0 +1,80 @@
+\documentclass{article}
+
+% Packages for formatting
+\usepackage{graphicx} % For including images
+\usepackage{lipsum} % For generating dummy text (remove in actual use)
+\usepackage{multicol} % For multi-column layout
+\usepackage{titlesec} % For customizing section titles
+\usepackage{titling} % For customizing title
+\usepackage{geometry} % For setting margins
+\usepackage{hyperref} % For hyperlinks
+\usepackage{natbib} % For bibliography
+\usepackage{lineno} % For line numbering
+
+% Define custom colors
+\usepackage{xcolor}
+\definecolor{economistblue}{RGB}{0, 48, 97}
+\definecolor{economistred}{RGB}{255, 51, 51}
+
+% Set document margins
+\geometry{margin=1.25in}
+
+% Customize title
+\pretitle{\begin{center}\LARGE\bfseries\color{economistblue}}
+\posttitle{\par\end{center}\vskip 0.5em}
+\preauthor{\begin{center}\large}
+\postauthor{\par\end{center}}
+\predate{\begin{center}\large\itshape}
+\postdate{\par\end{center}}
+
+% Customize section titles
+\titleformat{\section}
+{\normalfont\Large\bfseries\color{economistblue}}
+{\thesection}{1em}{}
+
+% No indentation
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\title{Education Reforms}
+\author{Rishabh Jain}
+\date{\today}
+\maketitle
+
+
+\section{Frequency of Education Reforms in Asia vs Europe}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth]{Plots/reforms_over_time.pdf}
+\caption{Number of Reforms Over Time in Asia vs Europe}
+\label{fig:reforms}
+\end{figure}
+Over the years, the number of reforms in Europe has been significantly higher than the number of reforms in Asia.
+The same should be visible in the above visualization in the form of a line plot.
+The figure shows the cumulative number of reforms in Asia and Europe from 1900 to 2025, with the maximum number of reforms occurring in 2012 in Europe and 2010 in Asia.
+This could be one of the reasons why, Europe in general has much higher ranked universities than Asia.
+
+% References section (Moved to after the next figure)
+% \section*{References}
+% \begin{enumerate}
+%     \item Bromley, Patricia; Kijima, Rie; Overbey, Lisa; Furuta, Jared; Choi, Minju; Santos, Heitor, Song, Jieun; Nachtigal, Tom, 2023, "World Education Reform Database (WERD)", \url{https://doi.org/10.7910/DVN/C0TWXM}, Harvard Dataverse, V2
+% \end{enumerate}
+
+\section{Frequency of Education Reforms worldwide}
+Another interesting way to understand education reforms in the world is to look at the number of reforms in each country within several regions. On doing so, we find that within Asia, Turkey and Indonesia have had the highest number of education reforms, while in South America, Colombia and Chile have had the highest number of education reforms. In Europe, the United Kingdom and Denmark have had the highest number of education reforms.
+The same can be observed carefully in the plot on the next page.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth]{Plots/Top-2-countries_by_region.pdf}
+\caption{Number of reforms worldwide with top 2 countries with maximum reforms in each region}
+\label{fig:top_countries}
+\end{figure}
+
+% References section (Moved here)
+\section*{References}
+\begin{enumerate}
+    \item Bromley, Patricia; Kijima, Rie; Overbey, Lisa; Furuta, Jared; Choi, Minju; Santos, Heitor, Song, Jieun; Nachtigal, Tom, 2023, "World Education Reform Database (WERD)", \url{https://doi.org/10.7910/DVN/C0TWXM}, Harvard Dataverse, V2
+\end{enumerate}
+
+\end{document}
